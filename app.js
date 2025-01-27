@@ -38,6 +38,22 @@ function actualizarListaAmigos(){
   });
 }
 
+function sortearAmigo(){
+  // verifica que la lista de amigos no esté vacía
+  if(amigos.length == 0) return;
+
+  // se obtiene un indece random apartir del numero de elementos en la lista
+  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+  // obtiene al amigo que se encuentra ocupando ese indice en la lista
+  const resultado = amigos[indiceAleatorio];
+
+  // muestra al usuario a ese amigo obtenido desde el sorteo
+  const resultadoBox = document.getElementById("resultado")
+  resultadoBox.innerHTML = resultado;
+ 
+}
+
 
 
 
